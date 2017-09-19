@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IFC-lr-uPb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan-->
+        <scene sceneID="8ky-9J-I0B">
+            <objects>
+                <viewController storyboardIdentifier="ScanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IFC-lr-uPb" customClass="ScanViewController" customModule="MRT_CW1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XTx-HL-epe"/>
+                        <viewControllerLayoutGuide type="bottom" id="qzL-BJ-Iyc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l2H-gb-KNX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UH5-no-VnD">
+                                <rect key="frame" x="166" y="579" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHG-cJ-h0e">
+                                <rect key="frame" x="320" y="28" width="46" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Oh9-G5-pSL"/>
+                                    <constraint firstAttribute="width" constant="46" id="YcL-Di-gIz"/>
+                                </constraints>
+                                <state key="normal" image="flash_off">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleFlashWithSender:" destination="IFC-lr-uPb" eventType="touchUpInside" id="eRL-7m-lfJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.05309763277" green="0.16622180710000001" blue="0.25975550520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kHG-cJ-h0e" firstAttribute="top" secondItem="XTx-HL-epe" secondAttribute="bottom" constant="8" symbolic="YES" id="5X5-7S-cA4"/>
+                            <constraint firstItem="UH5-no-VnD" firstAttribute="centerX" secondItem="l2H-gb-KNX" secondAttribute="centerX" id="KNf-GO-RU1"/>
+                            <constraint firstItem="qzL-BJ-Iyc" firstAttribute="top" secondItem="UH5-no-VnD" secondAttribute="bottom" constant="18" id="Tri-WF-Gam"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kHG-cJ-h0e" secondAttribute="trailing" constant="-7" id="qB7-4D-g5O"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan" image="camera" id="JUz-1J-pXe"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="flashButton" destination="kHG-cJ-h0e" id="UcO-mX-NAT"/>
+                        <outlet property="messageLabel" destination="UH5-no-VnD" id="udB-Fm-knp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xy-kF-HHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="30" height="30"/>
+        <image name="flash_off" width="24" height="24"/>
+    </resources>
+</document>
